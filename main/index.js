@@ -36,7 +36,7 @@ require("./config/passport")(passport);
 app.use(express.static(__dirname + '/public'));
 
 
-app.use(morgan("dev")); // log every request to the console
+app.use(morgan('tiny')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 
 
@@ -58,7 +58,7 @@ require("./routes/userlogin.js")(app);
 require("./routes/forgotpassword.js")(app);
 require("./routes/resetpassword.js")(app);
 
-// listning local port
+// listening local port
 var port = process.env.PORT;
 app.listen(port, function () {
   console.log("Running on Port " + port);
