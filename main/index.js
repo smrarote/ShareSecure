@@ -62,4 +62,5 @@ require("./routes/resetpassword.js")(app);
 var port = process.env.PORT;
 app.listen(port, function () {
   console.log("Running on Port " + port);
+  console.log("Server Initiated ...");
 });
